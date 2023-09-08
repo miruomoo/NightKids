@@ -1,0 +1,14 @@
+h1 {
+    color: yellow;
+}
+.container{
+    background-color: black;
+}
+
+.row{
+    background-color: black;
+}
+
+.col-xs-12{
+    background-color: black;
+}
