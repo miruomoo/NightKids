@@ -7,6 +7,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { SuccessComponent } from './success/success.component';
 import { FailureComponent } from './failure/failure.component';
+import { UsernameComponent } from './username/username.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FailureComponent } from './failure/failure.component';
     ServerComponent,
     ServersComponent,
     SuccessComponent,
-    FailureComponent
+    FailureComponent,
+    UsernameComponent
   ],
   imports: [
     BrowserModule,
