@@ -6,6 +6,5 @@ import { Component } from "@angular/core";
     styleUrls: ['./car.component.css']
 })
 
-export class carComponent{
-    
+export class CarComponent{
 }

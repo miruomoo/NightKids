@@ -4,9 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { CarListComponent } from './components/carBook/car-list/car-list.component';
-import { CarItemComponent } from './components/carBook/car-item/car-item.component';
-import { CarDetailComponent } from './components/carBook/car-detail/car-detail.component';
+import { CarListComponent } from './components/car/car-list/car-list.component';
+import { CarItemComponent } from './components/car/car-list/car-item/car-item.component';
+import { CarDetailComponent } from './components/car/car-detail/car-detail.component';
+import { CarComponent } from './components/car/car.component';
+import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
+import { ShoppingListEditComponent } from './components/shopping-list/shopping-list-edit/shopping-list-edit.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { CarDetailComponent } from './components/carBook/car-detail/car-detail.c
     HeaderComponent,
     CarListComponent,
     CarItemComponent,
-    CarDetailComponent
+    CarDetailComponent,
+    CarComponent,
+    ShoppingListComponent,
+    ShoppingListEditComponent
   ],
   imports: [
     BrowserModule,

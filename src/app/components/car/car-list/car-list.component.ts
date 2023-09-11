@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Car } from '../car.model';
 
 @Component({
   selector: 'app-car-list',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./car-list.component.css']
 })
 export class CarListComponent {
-
+  cars: Car[] = [];
 }
