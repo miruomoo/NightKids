@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   collapsed = true;
+  @Output() pageSelected= new EventEmitter<{pageName: string}>();
+
+  onCarsSelected(){
+    this.pageSelected.emit({pageName: 'cars'})
+  }
+
+  onShoppingListSelected(){
+    this.pageSelected.emit({pageName: 'shoppingList'})
+  }
 
 }
