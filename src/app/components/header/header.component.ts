@@ -7,14 +7,14 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent {
   collapsed = true;
-  @Output() pageSelected= new EventEmitter<{pageName: string}>();
+  @Output() pageSelected = new EventEmitter<string>();
 
   onCarsSelected(){
-    this.pageSelected.emit({pageName: 'cars'})
+    this.pageSelected.emit('cars')
   }
 
   onShoppingListSelected(){
-    this.pageSelected.emit({pageName: 'shoppingList'})
+    this.pageSelected.emit('shoppingList')
   }
 
 }
