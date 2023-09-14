@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Car } from '../car.model';
 
 @Component({
   selector: 'app-car-detail',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./car-detail.component.css']
 })
 export class CarDetailComponent {
-
+  @Input() car: Car;
 }

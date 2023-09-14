@@ -7,8 +7,13 @@ import { Part } from '../shared/part.model';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent {
+
   parts: Part[] = [
     new Part('FA20', 10),
     new Part('Body Kit', 2)
   ]
+
+  onDataRecieved(newPart: Part){
+    this.parts.push(newPart);
+  }
 }

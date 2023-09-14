@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Car } from "./car.model";
 
 @Component({
     selector: 'app-car',
@@ -7,4 +8,5 @@ import { Component } from "@angular/core";
 })
 
 export class CarComponent{
+    selectedCar: Car;
 }

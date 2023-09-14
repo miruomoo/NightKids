@@ -6,6 +6,7 @@
 <hr>
 <div class="row">
     <div class="col-xs-12">
-        <app-car-item *ngFor="let carEl of cars" [car]="carEl"></app-car-item>
+        <app-car-item *ngFor="let carElement of cars" [car]="carElement"
+        (carData)="onCarSelected(carElement)"></app-car-item>
     </div>
 </div>
