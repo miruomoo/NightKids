@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ActivatedRoute, Params } from '@angular/router'
+import { ActivatedRoute, Params, Router } from '@angular/router'
 import { Car } from '../car.model';
 import { ShoppingListService } from '../../shopping-list/shopping-list.service';
 import { CarService } from '../car.service';
@@ -14,7 +14,7 @@ export class CarDetailComponent {
   car: Car;
   id: number;
 
-  constructor(private shoppingListService: ShoppingListService, private carService: CarService, private route: ActivatedRoute){
+  constructor(private shoppingListService: ShoppingListService, private carService: CarService, private route: ActivatedRoute, private router: Router){
   }
 
   ngOnInit(){
@@ -29,5 +29,9 @@ export class CarDetailComponent {
 
   toShoppingList(){
     this.shoppingListService.toShoppingList(this.car.parts);
+  }
+
+  editCar(){
+    this.router.navigate(["../",this.id,"edit"],{relativeTo: this.route})
   }
 }
