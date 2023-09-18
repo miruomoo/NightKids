@@ -1,19 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Part } from '../shared/part.model';
+import { ShoppingListService } from './shopping-list.service';
 
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.css']
+  styleUrls: ['./shopping-list.component.css'],
 })
 export class ShoppingListComponent {
 
-  parts: Part[] = [
-    new Part('FA20', 10),
-    new Part('Body Kit', 2)
-  ]
+  parts: Part[] = []
 
-  onDataRecieved(newPart: Part){
-    this.parts.push(newPart);
+  constructor(private shoppingListService: ShoppingListService){
+  }
+
+  ngOnInit(){
+    this.parts = this.shoppingListService.getShoppingList();
+    this.shoppingListService.partsChanged.subscribe((newParts: Part[])=>{
+      this.parts = newParts;
+    })
   }
 }

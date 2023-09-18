@@ -1,16 +1,20 @@
 .navbar-brand {
     color: yellow;
 }
-.navbar-default{
-    background-color: rgb(30, 30, 30);
-    border: none;
-}
 
 .navbar ul li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    }
+}
     
 .navbar ul li:hover a {
     color: yellow;
-    }
+}
+
+.dropdown-menu{
+    background-color: rgb(30, 30, 30);
+}
+.dropdown-menu a:hover{
+    background-color: rgb(60, 60, 60);
+    color: white;
+}

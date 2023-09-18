@@ -1,9 +1,11 @@
-<app-header (pageSelected)="afterPageSelected($event)"></app-header>
+<app-header></app-header>
 <div class="container">
 <div class="row">
     <div class="col-xs-12">
-        <app-car *ngIf="selectedPage==='cars'"></app-car>
-        <app-shopping-list *ngIf="selectedPage==='shoppingList'"></app-shopping-list>
+        <router-outlet></router-outlet>
     </div>
 </div>
+</div>
+<div class="navbar navbar-default navbar-fixed-bottom" style="background-color: transparent; border: 0;">
+    <p class="text-center p-3">Made by Miruo with Angular!</p>
 </div>

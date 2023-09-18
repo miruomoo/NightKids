@@ -1,5 +1,6 @@
-import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Part } from '../../shared/part.model';
+import { ShoppingListService } from '../shopping-list.service';
 
 @Component({
   selector: 'app-shopping-list-edit',
@@ -9,10 +10,12 @@ import { Part } from '../../shared/part.model';
 export class ShoppingListEditComponent {
   @ViewChild('nameInput') partName: ElementRef
   @ViewChild('amountInput') partAmount: ElementRef
-  @Output() partData = new EventEmitter<Part>();
+
+  constructor(private shoppingListService: ShoppingListService){
+  }
 
   onAddClicked(){
-    this.partData.emit(new Part(this.partName.nativeElement.value, this.partAmount.nativeElement.value))
+    this.shoppingListService.addShoppingList(new Part(this.partName.nativeElement.value, this.partAmount.nativeElement.value))
   }
 
   

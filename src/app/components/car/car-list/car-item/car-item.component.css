@@ -10,6 +10,12 @@
     background-color: grey;
 }
 
+.list-group-item.active{
+    background-color: grey;
+    border-color: yellow;
+}
+
+
 .list-group-item-text{
     color: white;
 }

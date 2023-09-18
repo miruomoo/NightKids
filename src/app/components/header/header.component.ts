@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +7,16 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent {
   collapsed = true;
-  @Output() pageSelected = new EventEmitter<string>();
+  // @Output() pageSelected = new EventEmitter<string>();
 
-  onCarsSelected(){
-    this.pageSelected.emit('cars')
-  }
+  // onCarsSelected(){
+  //   // this.pageSelected.emit('cars')\
+  //   this.router.navigate(['cars']);
+  // }
 
-  onShoppingListSelected(){
-    this.pageSelected.emit('shoppingList')
-  }
+  // onShoppingListSelected(){
+  //   // this.pageSelected.emit('shoppingList')
+  //   this.router.navigate(['shopping-list']);
+  // }
 
 }

@@ -10,6 +10,11 @@ import { CarDetailComponent } from './components/car/car-detail/car-detail.compo
 import { CarComponent } from './components/car/car.component';
 import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
 import { ShoppingListEditComponent } from './components/shopping-list/shopping-list-edit/shopping-list-edit.component';
+import { DropdownDirective } from './components/shared/dropdown.directive';
+import { ShoppingListService } from './components/shopping-list/shopping-list.service';
+import { AppRoutingModule } from './app-routing.module';
+import { CarStartComponent } from './components/car/car-start/car-start.component';
+import { CarEditComponent } from './components/car/car-edit/car-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +25,17 @@ import { ShoppingListEditComponent } from './components/shopping-list/shopping-l
     CarDetailComponent,
     CarComponent,
     ShoppingListComponent,
-    ShoppingListEditComponent
+    ShoppingListEditComponent,
+    DropdownDirective,
+    CarStartComponent,
+    CarEditComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 

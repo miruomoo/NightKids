@@ -7,11 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   name = 'NightKids';
-  @Input() pageName: string;
-  selectedPage = "cars"
+  // @Input() pageName: string;
+  // selectedPage = "cars"
 
-  afterPageSelected(pageName: string){
-    this.selectedPage=pageName;
-  }
+  // afterPageSelected(pageName: string){
+  //   this.selectedPage=pageName;
+  // }
 
 }

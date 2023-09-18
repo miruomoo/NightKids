@@ -1,5 +1,6 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Car } from '../car.model';
+import { CarService } from '../car.service';
 
 @Component({
   selector: 'app-car-list',
@@ -7,13 +8,12 @@ import { Car } from '../car.model';
   styleUrls: ['./car-list.component.css']
 })
 export class CarListComponent {
-  @Output() carWasSelected = new EventEmitter<Car>();
-  cars: Car[] = [
-    new Car('AE86', 'Akina Speedstars', 'https://i.redd.it/afyyu99p77u41.jpg'),
-    new Car('RX-7', 'Akagi RedSuns', "http://s3.amazonaws.com/gt7sp-prod/livery/36/41/66/5846314446295664136_23.jpg")
-  ];
+  cars: Car[];
 
-  onCarSelected(car: Car){
-    this.carWasSelected.emit(car)
+  constructor(private carService: CarService){
+  }
+
+  ngOnInit(){
+    this.cars = this.carService.getCars();
   }
 }
