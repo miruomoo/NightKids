@@ -1,5 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { Car } from "./car.model";
+import { Component } from "@angular/core";
 import { CarService } from "./car.service";
 
 @Component({
@@ -10,12 +9,11 @@ import { CarService } from "./car.service";
 })
 
 export class CarComponent{
-    selectedCar: Car;
-    constructor (private carService: CarService){}
+    constructor (){}
 
     ngOnInit(){
-        this.carService.carSelected.subscribe((car:Car)=>{
-            this.selectedCar = car;
-        })
+        // this.carService.carSelected.subscribe((car:Car)=>{
+        //     this.selectedCar = car;
+        // })
     }
 }

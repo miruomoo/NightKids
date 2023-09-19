@@ -1,12 +1,10 @@
-import { EventEmitter} from "@angular/core";
 import { Car } from "./car.model";
 import { Part } from "../shared/part.model";
 
 export class CarService {
-    carSelected = new EventEmitter<Car>();
 
     private cars: Car[] = [
-        new Car('Toyota AE86', 'Akina Speedstars', 'https://i.redd.it/afyyu99p77u41.jpg', [
+        new Car('Toyota AE-86', 'Akina Speedstars', 'https://i.redd.it/afyyu99p77u41.jpg', [
             new Part('4A-GE Engine', 1),
             new Part('AE-86 Panda Body Kit', 1)
         ]),

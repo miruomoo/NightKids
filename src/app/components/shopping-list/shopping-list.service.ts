@@ -1,8 +1,8 @@
-import { EventEmitter } from "@angular/core";
 import { Part } from "../shared/part.model"
+import { Subject } from "rxjs";
 
 export class ShoppingListService{
-    partsChanged = new EventEmitter<Part[]>();
+    partsChanged = new Subject<Part[]>();
 
     private parts: Part[] = [
         new Part('FA20', 10),
@@ -15,7 +15,7 @@ export class ShoppingListService{
 
     addShoppingList(newPart: Part){
         this.parts.push(newPart);
-        this.partsChanged.emit(this.parts.slice());
+        this.partsChanged.next(this.parts.slice());
     }
 
     toShoppingList(newParts: Part[]){
@@ -23,7 +23,7 @@ export class ShoppingListService{
         //     this.parts.push(newPart)
         // }
         this.parts.push(...newParts)
-        this.partsChanged.emit(this.parts.slice());
+        this.partsChanged.next(this.parts.slice());
     }
     
 }

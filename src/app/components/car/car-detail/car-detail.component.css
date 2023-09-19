@@ -21,3 +21,22 @@
 hr{
     border-color: rgb(82, 82, 82);
 }
+
+.btn.btn-primary.dropdown-toggle{
+    background-color: grey;
+    border: 0;
+    color: black;
+}
+
+.dropdown-menu{
+    background-color: grey;
+}
+
+.dropdown-menu a{
+    color: black;
+}
+
+.dropdown-menu a:hover{
+    color: yellow;
+    background-color: transparent;
+}
