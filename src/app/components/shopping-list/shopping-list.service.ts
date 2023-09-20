@@ -3,6 +3,7 @@ import { Subject } from "rxjs";
 
 export class ShoppingListService{
     partsChanged = new Subject<Part[]>();
+    startedEditing = new Subject<number>();
 
     private parts: Part[] = [
         new Part('FA20', 10),
@@ -11,6 +12,20 @@ export class ShoppingListService{
 
     getShoppingList(){
         return this.parts.slice();
+    }
+
+    getPart(index: number){
+        return this.parts[index];
+    }
+
+    updatePart(index: number, newPart: Part){
+        this.parts[index] = newPart;
+        this.partsChanged.next(this.parts.slice())
+    }
+
+    deletePart(index: number){
+        this.parts.splice(index, 1)
+        this.partsChanged.next(this.parts.slice())
     }
 
     addShoppingList(newPart: Part){
