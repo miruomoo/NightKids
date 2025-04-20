@@ -8,8 +8,8 @@ Built with **Angular** and **TypeScript**.
 ## 🏎️ Features
 
 - Clean and modern UI for browsing vehicles and parts  
-- View parts of each vehicle and add to cart
-- Built with a responsive frontend using Angular
+- View parts of each vehicle and add to your cart
+- Add or import vehicles and custom builds
 
 ---
 
